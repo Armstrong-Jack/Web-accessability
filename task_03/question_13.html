@@ -1,0 +1,59 @@
+  <!DOCTYPE html>
+   <html>
+   <head>
+       <title>Module Rating</title>
+   </head>
+   <body>
+       <h1>Rate Module CIS1705</h1>
+       <form>
+           <label for="rating">Rate the module:</label>
+           <select id="rating" name="rating">
+               <option value="1">1 - Terrible</option>
+               <option value="2">2 - Bad</option>
+               <option value="3">3 - Not Great</option>
+               <option value="4">4 - Good</option>
+               <option value="5">5 - Great</option>
+           </select>
+           <button type="button" onclick="showModuleRating()">Submit</button>
+       </form>
+       <div id="result"></div>
+
+       <script>
+           // Function to handle the form submission and display the module rating
+           function showModuleRating() {
+               // Get the select element that contains the rating options
+               const selectElement = document.getElementById("rating");
+               // Get the selected rating value from the select element
+               const ratingValue = selectElement.value;
+               // Get the result element where the rating text will be displayed
+               const resultElement = document.getElementById("result");
+
+               // Start of student code
+                if (ratingValue == 1) {
+                     let ratting_message = "The module is terriable" ;
+                     document.getElementById('result').innerText = ratting_message;
+                }
+                if (ratingValue == 2){
+                    let ratting_message = "The module is bad";
+                    document.getElementById('result').innerText = ratting_message;
+                }
+                if (ratingValue == 3){
+                    let ratting_message = "The module is not great";
+                    document.getElementById('result').innerText = ratting_message;
+                }
+                if (ratingValue == 4) {
+                    let ratting_message = "The module is good";
+                    document.getElementById('result').innerText = ratting_message;
+                }
+                if (ratingValue == 5) {
+                    let ratting_message = "The module is great";
+                    document.getElementById('result').innerText = ratting_message;
+                }
+                
+               // End of student code
+   }
+
+
+       </script>
+   </body>
+   </html>
